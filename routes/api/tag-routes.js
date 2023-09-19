@@ -5,10 +5,10 @@ const { Tag, Product, ProductTag } = require('../../models');
 // this route finds all tag 
 router.get('/', (req, res) => {
   try {
-    const tagData = await Tag.findAll({
+    const tagElements  = await Tag.findAll({
       include: [{model: Product}]
     });
-    res.status(200).json(tagData);
+    res.status(200).json(tagElements);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -16,10 +16,10 @@ router.get('/', (req, res) => {
 // finds a specific tag by its id
 router.get('/:id', (req, res) => {
   try {
-    const tagData = await Tag.findByPk(req.params.id,{
+    const tagElements = await Tag.findByPk(req.params.id,{
       include: [{model: Product}]
     }); 
-    res.status(200).json(tagData);
+    res.status(200).json(tagElements);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,8 +27,8 @@ router.get('/:id', (req, res) => {
 // creates a new tag
 router.post('/', (req, res) => {
   try {
-    const tagData = await Tag.create(req.body);
-    res.status(200).json(tagData);
+    const tagElements = await Tag.create(req.body);
+    res.status(200).json(tagElements);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -59,8 +59,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-    .then((deletedTag) => {
-      res.json(deletedTag);
+    .then((destroyedTag) => {
+      res.json(destroyedTag);
     })
     .catch((err) => res.json(err));
 });
