@@ -12,6 +12,7 @@
   - [Contribution](#contribution)
   - [Demonstration](#demonstration)
   - [Testing](#testing)
+  - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
 
@@ -36,7 +37,13 @@
   
   ## Demonstration
 
-  [Watch this video demonstration]()
+  [Watch this video demonstration](https://drive.google.com/file/d/15sFVK5YQ0b8d8lz_1mNz-tQ_1UnLX3rI/view?usp=sharing)
+
+  <a name="credits"></a>
+
+  ## Credits
+
+Starter Code for this application was provided by the GW Fullstack Web Development Bootcamp.
 
   <a name="testing"></a>
 
